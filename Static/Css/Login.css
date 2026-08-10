@@ -1,0 +1,163 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(115deg, #38dc01 10%, #290fbe 60%, #b70b02 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+
+.login-container {
+    width: 100%;
+    max-width: 380px;
+    padding: 30px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.logo-img {
+    width: 450px;
+    height: 450px;
+    object-fit: contain;
+}
+
+.app-title {
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.1;
+    letter-spacing: 0.5px;
+}
+
+.login-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+
+    border-radius: 50px;
+    padding:  0 12px;
+    height: 44px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 4px;
+}
+
+.input-group .input-icon {
+    color: #333333;
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    flex-shrink: 0;
+}
+
+.input-group input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 13px;
+    color: #333333;
+    background: transparent;
+}
+
+.input-group input::placeholder {
+    color: #888888;
+    font-style: italic;
+}
+
+.toggle-eye {
+    color: #333333;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4px;
+    margin-bottom: 15px;
+    font-size: 11px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    color: #000000;
+}
+
+.remember-me input[type="checkbox"] {
+    accent-color: #3bff14;
+    width: 14px;
+    height: 14px;
+}
+
+.forgot-pass {
+    color: #0046ea;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.btn-entrar {
+    width: 100%;
+    height: 46px;
+    background: linear-gradient(90deg, #1515b0 8%, #ad0202 100%);
+    color: #faf8f8;
+    border-radius: 10px;
+    font-size: 22px;
+    font-weight: 600;
+    cursor: pointer;
+    
+    box-shadow: 0 4px 10px rgba(152, 139, 139, 1);
+    margin-top: 65px;
+    
+   
+}
+
+.btn-entrar:hover {
+    color: #d3d3d1;
+   
+}
+
+.btn-entrar:active {
+    transform: scale(0.98);
+}
+.Box_login{
+    display: flex;
+    flex-direction: column;
+
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    height: 380px;
+
+}
