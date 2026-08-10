@@ -37,6 +37,29 @@ app.use(express.static(path.join(__dirname, "Static")));
 
 // Rotas
 app.use("/", usuarioRoutes);
+app.use("/login", usuarioRoutes);
+app.use("/Dashbord", usuarioRoutes);
+app.use("/modalidades", usuarioRoutes);
+app.use("/minhasModalidades", usuarioRoutes);
+app.use("/MeusTreinos", usuarioRoutes);
+app.use("/DesempenhoTreino", usuarioRoutes);
+app.use("/HistoriTreino", usuarioRoutes);
+// RotaProfessor
+app.use("/Dashbord", usuarioRoutes);
+app.use("/MinhasModalidades", usuarioRoutes);
+app.use("/MeusAlunos", usuarioRoutes);
+app.use("/CriarTreinos", usuarioRoutes);
+app.use("/CadastrarAluno", usuarioRoutes);
+app.use("/AvaliarTreino", usuarioRoutes);
+app.use("/RankingModalidade", usuarioRoutes);
+app.use("/HistoricoTreinoAluno/<int:id>", usuarioRoutes);
+app.use("/EnviarAviso", usuarioRoutes);
+// RotasSecretaria
+app.use("/", usuarioRoutes);
+app.use("/", usuarioRoutes);
+app.use("/", usuarioRoutes);
+app.use("/", usuarioRoutes);
+
 
 
 // Inicializa servidor
