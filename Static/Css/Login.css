@@ -17,8 +17,7 @@ body {
         145deg,
         #38dc01 10%,
         #290fbe 50%,
-        #8220e4 75%,
-        #8c0700 100%
+        #1a8c00 100%
     );
 
     min-height: 140vh;
@@ -74,8 +73,11 @@ body {
     height: auto;
 
     max-width: 90vw;
-
+  
     object-fit: contain;
+    border-radius: 500px; 
+    box-shadow:0 4px 10px rgba(0, 0, 0, 0.25);
+    border: #000000 2px solid;
 }
 
 .logoif-img {
@@ -278,6 +280,7 @@ body {
 
     transition: 0.3s;
 }
+
 .btnSuap-entrar {
     width: 100%;
 

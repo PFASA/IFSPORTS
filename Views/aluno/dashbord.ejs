@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../../Css/Aluno/dashbord.css">
+     <script>
+    (function() {
+        const tema = localStorage.getItem("tema_app") || "sistema";
+        if (tema === "escuro" || (tema === "sistema" && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+            document.documentElement.setAttribute("data-tema", "escuro");
+            document.addEventListener("DOMContentLoaded", () => document.body.setAttribute("data-tema", "escuro"));
+        }
+    })();
+    </script>
+</head>
+<body>
+    <article class="barraLateral">
+        <div class="perfil-container">
+  <!-- Foto de perfil ou placeholder de imagem -->
+            <div class="foto-perfil-box">
+                 <img src="../../img/img_perfil.jpg" alt="Foto de Perfil" class="foto-perfil" />
+            </div>
+  
+  <!-- Informações ou botão de ação -->
+            <button class="btn-perfil">
+                <span class="icon-mask icon-perfil"></span>
+                <span class="texto-perfil">Meu Perfil</span>
+            </button>
+        </div>
+        <section id="Saudacoes">
+                    <p id="OlaAluno">Olá, Aluno!</p>
+        </section>
+
+    </article>
+    
+
+    <div class="TelaDashboard">
+
+        <!-- Header fora do ScrollView para encostar nas bordas -->
+        <header id="Header">
+            <h1 id="TituloPagina">Dashboard</h1>
+        
+        </header>
+        <nav id="BottomNav">
+            <a href="/Dashbord" id="BtnInicio" class="nav-btn">
+                <span class="icon-mask icon-home"></span>
+                <span class="Texto">Home</span>
+            </a>
+            <a href="/Modalidades" id="BtnAgenda" class="nav-btn">
+                <span class="icon-mask icon-calendar"></span>
+                <span class="Texto">Modalidades</span>
+            </a>
+            <a href="/MeuDesempenho" id="BtnPerfil" class="nav-btn">
+                <span class="icon-mask icon-perfil"></span>
+                <span class="Texto">Meu Desempenho</span>
+            </a>
+        </nav>
+
+        <!-- Área de rolagem apenas com os cards e conteúdo -->
+        <div id="">
+            <div id="Dashboard">
+
+                
+
+                <div id="CardTCC" class="card">
+                 
+                </div>
+
+                <div id="CardAgenda" class="card">
+                 
+                </div>
+
+                <div id="CardVersion" class="card">
+                    
+                </div>
+
+                <div id="CardFeedback" class="card">
+                   
+                </div>
+                
+                <div id="CardTCC" class="card">
+                 
+                </div>
+
+                <div id="CardAgenda" class="card">
+                 
+                </div>
+
+                <div id="CardVersion" class="card">
+                    
+                </div>
+
+                <div id="CardFeedback" class="card">
+                   
+                </div>
+                
+                <div id="CardTCC" class="card">
+                 
+                </div>
+
+                <div id="CardAgenda" class="card">
+                 
+                </div>
+
+                <div id="CardVersion" class="card">
+                    
+                </div>
+
+                <div id="CardFeedback" class="card">
+                   
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Bottom Navigation -->
+        
+
+    </div>
+   
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const pathAtual = window.location.pathname.toLowerCase();
+            const navLinks = document.querySelectorAll("#BottomNav .nav-btn");
+
+            navLinks.forEach(link => {
+                const href = link.getAttribute("href").toLowerCase();
+                
+                if (pathAtual === href || (pathAtual === "/" && href === "/dashboard")) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>
+
+</body>
+</html> 
