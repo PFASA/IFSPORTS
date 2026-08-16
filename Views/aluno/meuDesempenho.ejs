@@ -17,10 +17,15 @@
 </head>
 <body>
     <article class="barraLateral">
+
+        <div class= "logo">
+            <span>IF</span><span>Sports</span>
+        </div>
+
         <div class="perfil-container">
   <!-- Foto de perfil ou placeholder de imagem -->
             <div class="foto-perfil-box">
-                 <img src="../../img/img_perfil.jpg" alt="Foto de Perfil" class="foto-perfil" />
+                 <img src="../../img/Pedrão.jpeg" alt="Foto de Perfil" class="foto-perfil" />
             </div>
   
   <!-- Informações ou botão de ação -->
@@ -30,7 +35,7 @@
             </button>
         </div>
         <section id="Saudacoes">
-                    <p id="OlaAluno">Olá, Aluno!</p>
+                    <p id="OlaAluno">Olá, Pedro! 👋</p>
         </section>
 
     </article>
@@ -40,20 +45,33 @@
 
         <!-- Header fora do ScrollView para encostar nas bordas -->
         <header id="Header">
+
             <h1 id="TituloPagina">Meus Desempenhos</h1>
-        
+
+            <div class="HeaderAcoes">
+
+                <button class="icon-btn" title="Notificações">
+                    <span class="icon-mask icon-sino"></span>
+                </button>
+
+                <button class="icon-btn" title="Sair">
+                    <span class="icon-mask icon-sair"></span>
+                </button>
+
+            </div>
+
         </header>
-        <nav id="BottomNav">
+        <nav id="UpperNav">
             <a href="/Dashbord" id="BtnInicio" class="nav-btn">
                 <span class="icon-mask icon-home"></span>
                 <span class="Texto">Home</span>
             </a>
             <a href="/Modalidades" id="BtnAgenda" class="nav-btn">
-                <span class="icon-mask icon-calendar"></span>
+                <span class="icon-mask icon-modalidades"></span>
                 <span class="Texto">Modalidades</span>
             </a>
             <a href="/MeuDesempenho" id="BtnPerfil" class="nav-btn">
-                <span class="icon-mask icon-perfil"></span>
+                <span class="icon-mask icon-desempenho"></span>
                 <span class="Texto">Meu Desempenho</span>
             </a>
         </nav>
@@ -123,7 +141,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const pathAtual = window.location.pathname.toLowerCase();
-            const navLinks = document.querySelectorAll("#BottomNav .nav-btn");
+            const navLinks = document.querySelectorAll("#UpperNav .nav-btn");
 
             navLinks.forEach(link => {
                 const href = link.getAttribute("href").toLowerCase();

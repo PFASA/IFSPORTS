@@ -5,135 +5,394 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="../../Css/Aluno/dashbord.css">
-     <script>
-    (function() {
-        const tema = localStorage.getItem("tema_app") || "sistema";
-        if (tema === "escuro" || (tema === "sistema" && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
-            document.documentElement.setAttribute("data-tema", "escuro");
-            document.addEventListener("DOMContentLoaded", () => document.body.setAttribute("data-tema", "escuro"));
-        }
-    })();
+
+    <script>
+        (function() {
+            const tema = localStorage.getItem("tema_app") || "sistema";
+
+            if (
+                tema === "escuro" ||
+                (tema === "sistema" &&
+                window.matchMedia("(prefers-color-scheme: dark)").matches)
+            ) {
+                document.documentElement.setAttribute("data-tema", "escuro");
+
+                document.addEventListener("DOMContentLoaded", () => {
+                    document.body.setAttribute("data-tema", "escuro");
+                });
+            }
+        })();
     </script>
 </head>
+
 <body>
+
+    <!-- SIDEBAR -->
     <article class="barraLateral">
+
+        <div class= "logo">
+            <span>IF</span><span>Sports</span>
+        </div>
+
         <div class="perfil-container">
-  <!-- Foto de perfil ou placeholder de imagem -->
+
             <div class="foto-perfil-box">
-                 <img src="../../img/img_perfil.jpg" alt="Foto de Perfil" class="foto-perfil" />
+                <img
+                    src="../../img/Pedrão.jpeg"
+                    alt="Foto de Perfil"
+                    class="foto-perfil"
+                >
             </div>
-  
-  <!-- Informações ou botão de ação -->
+
             <button class="btn-perfil">
                 <span class="icon-mask icon-perfil"></span>
                 <span class="texto-perfil">Meu Perfil</span>
             </button>
+
         </div>
+
         <section id="Saudacoes">
-                    <p id="OlaAluno">Olá, Aluno!</p>
+            <p id="OlaAluno">Olá, Pedro! 👋</p>
         </section>
 
     </article>
-    
 
+
+    <!-- ÁREA PRINCIPAL -->
     <div class="TelaDashboard">
 
-        <!-- Header fora do ScrollView para encostar nas bordas -->
+        <!-- HEADER -->
         <header id="Header">
+
             <h1 id="TituloPagina">Dashboard</h1>
-        
-        </header>
-        <nav id="BottomNav">
-            <a href="/Dashbord" id="BtnInicio" class="nav-btn">
-                <span class="icon-mask icon-home"></span>
-                <span class="Texto">Home</span>
-            </a>
-            <a href="/Modalidades" id="BtnAgenda" class="nav-btn">
-                <span class="icon-mask icon-calendar"></span>
-                <span class="Texto">Modalidades</span>
-            </a>
-            <a href="/MeuDesempenho" id="BtnPerfil" class="nav-btn">
-                <span class="icon-mask icon-perfil"></span>
-                <span class="Texto">Meu Desempenho</span>
-            </a>
-        </nav>
 
-        <!-- Área de rolagem apenas com os cards e conteúdo -->
-        <div id="">
-            <div id="Dashboard">
+            <div class="HeaderAcoes">
 
-                
+                <button class="icon-btn" title="Notificações">
+                    <span class="icon-mask icon-sino"></span>
+                </button>
 
-                <div id="CardTCC" class="card">
-                 
-                </div>
-
-                <div id="CardAgenda" class="card">
-                 
-                </div>
-
-                <div id="CardVersion" class="card">
-                    
-                </div>
-
-                <div id="CardFeedback" class="card">
-                   
-                </div>
-                
-                <div id="CardTCC" class="card">
-                 
-                </div>
-
-                <div id="CardAgenda" class="card">
-                 
-                </div>
-
-                <div id="CardVersion" class="card">
-                    
-                </div>
-
-                <div id="CardFeedback" class="card">
-                   
-                </div>
-                
-                <div id="CardTCC" class="card">
-                 
-                </div>
-
-                <div id="CardAgenda" class="card">
-                 
-                </div>
-
-                <div id="CardVersion" class="card">
-                    
-                </div>
-
-                <div id="CardFeedback" class="card">
-                   
-                </div>
+                <button class="icon-btn" title="Sair">
+                    <span class="icon-mask icon-sair"></span>
+                </button>
 
             </div>
+
+        </header>
+
+
+        <!-- NAVEGAÇÃO -->
+        <nav id="UpperNav">
+
+            <a href="/Dashbord" id="BtnInicio" class="nav-btn">
+
+                <span class="icon-mask icon-home"></span>
+
+                <span class="Texto">
+                    Home
+                </span>
+
+            </a>
+
+
+            <a href="/Modalidades" id="BtnAgenda" class="nav-btn">
+
+                <span class="icon-mask icon-modalidades"></span>
+
+                <span class="Texto">
+                    Modalidades
+                </span>
+
+            </a>
+
+
+            <a href="/MeuDesempenho" id="BtnPerfil" class="nav-btn">
+
+                <span class="icon-mask icon-desempenho"></span>
+
+                <span class="Texto">
+                    Meu Desempenho
+                </span>
+
+            </a>
+
+        </nav>
+
+
+        <!-- CONTEÚDO DO DASHBOARD -->
+        <div id="ScrollView">
+
+            <main id="Dashboard">
+
+
+                <!-- PRÓXIMO TREINO -->
+                <div id="CardTreino" class="card">
+
+                    <div class="HeaderGroup">
+
+                        <span class="icon-mask icon-calendar"></span>
+
+                        <span class="card-etapa">
+                            Próximo treino
+                        </span>
+
+                    </div>
+
+
+                    <div class="card-center-content">
+
+                        <p class="card-subtext">
+                            Hoje • 16:00
+                        </p>
+
+                        <h2 class="card-title">
+                            Treino de Resistência
+                        </h2>
+
+                        <p>
+                            Basquete
+                        </p>
+
+                        <p>
+                            5 exercícios • ~45 min
+                        </p>
+
+                    </div>
+
+
+                    <button class="btn-card">
+                        Ver treino →
+                    </button>
+
+                </div>
+
+
+                <!-- MODALIDADE -->
+                <div id="CardModalidade" class="card">
+
+                    <div class="HeaderGroup">
+
+                        <span class="icon-mask icon-home"></span>
+
+                        <span class="card-etapa">
+                            Sua modalidade
+                        </span>
+
+                    </div>
+
+
+                    <div class="card-center-content">
+
+                        <h2 class="card-title">
+                            Basquete
+                        </h2>
+
+                        <p>
+                            Turma: Intermediário
+                        </p>
+
+                        <p>
+                            Professor: Matheus Castro
+                        </p>
+
+                    </div>
+
+
+                    <button class="btn-card">
+                        Ver detalhes →
+                    </button>
+
+                </div>
+
+
+                <!-- RANKING -->
+                <div id="CardRanking" class="card">
+
+                    <div class="HeaderGroup">
+
+                        <span class="icon-mask icon-trophy"></span>
+
+                        <span class="card-etapa">
+                            Ranking (Basquete)
+                        </span>
+
+                    </div>
+
+
+                    <div class="card-center-content">
+
+                        <h2 class="card-ranking-position">
+                            3º lugar
+                        </h2>
+
+                        <p class="card-ranking-points">
+                            875 pontos
+                        </p>
+
+                        <p>
+                            Entre 24 atletas
+                        </p>
+
+                        <span class="ranking-evolution">
+                            ↑ 2 posições
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FREQUÊNCIA -->
+                <div id="CardFrequencia" class="card">
+
+                    <div class="HeaderGroup">
+
+                        <span class="icon-mask icon-frequency"></span>
+
+                        <span class="card-etapa">
+                            Frequência
+                        </span>
+
+                    </div>
+
+
+                    <div class="card-center-content">
+
+                        <h2 class="card-ranking-position">
+                            92%
+                        </h2>
+
+                        <span class="frequencia-status">
+                            Ótimo!
+                        </span>
+
+                        <div class="frequencia-barra">
+                            <div class="frequencia-progresso"></div>
+                        </div>
+
+                        <p>
+                            22 treinos realizados
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FEEDBACKS -->
+                <div id="CardFeedback" class="card card-feedback">
+
+                    <div class="HeaderGroup">
+
+                        <span class="card-icon-emoji">
+                            💬
+                        </span>
+
+                        <span class="card-etapa">
+                            Feedbacks recentes
+                        </span>
+
+                    </div>
+
+
+                    <div class="feedback-item">
+
+                        <div class="feedback-avatar">
+                            C
+                        </div>
+
+                        <div class="feedback-content">
+
+                            <strong>
+                                Treino de Força
+                            </strong>
+
+                            <span>
+                                12/08
+                            </span>
+
+                            <p>
+                                Ótimo desempenho! Continue assim!
+                            </p>
+
+                            <small>
+                                Prof. Matheus :3 • 12/08/2026
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="feedback-item">
+
+                        <div class="feedback-avatar">
+                            C
+                        </div>
+
+                        <div class="feedback-content">
+
+                            <strong>
+                                Treino Técnico
+                            </strong>
+
+                            <span>
+                                07/08
+                            </span>
+
+                            <p>
+                                Boa evolução na precisão dos passes.
+                            </p>
+
+                            <small>
+                                Prof. Matheus :3 • 07/08/2026
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <button class="btn-card btn-feedback">
+                        Ver todos →
+                    </button>
+
+                </div>
+
+
+            </main>
+
         </div>
 
-        <!-- Bottom Navigation -->
-        
-
     </div>
-   
+
+
     <script>
         document.addEventListener("DOMContentLoaded", () => {
+
             const pathAtual = window.location.pathname.toLowerCase();
-            const navLinks = document.querySelectorAll("#BottomNav .nav-btn");
+
+            const navLinks = document.querySelectorAll(
+                "#UpperNav .nav-btn"
+            );
 
             navLinks.forEach(link => {
-                const href = link.getAttribute("href").toLowerCase();
-                
-                if (pathAtual === href || (pathAtual === "/" && href === "/dashboard")) {
+
+                const href = link
+                    .getAttribute("href")
+                    .toLowerCase();
+
+                if (
+                    pathAtual === href ||
+                    (pathAtual === "/" && href === "/dashboard")
+                ) {
                     link.classList.add("active");
                 }
+
             });
+
         });
     </script>
 
 </body>
-</html> 
+</html>
