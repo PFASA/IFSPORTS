@@ -106,41 +106,25 @@ display:flex;
 align-items:center;
 justify-content:center;
 gap:8px;
-border:none;
-padding: 10px 12px;
+padding:10px 12px;
+border:0;
 border-radius:20px;
+background:transparent;
+color:var(--text-1);
 font-size:.875rem;
 font-weight:600;
+text-decoration:none;
 cursor:pointer;
+transition:.2s
 }
 
-.icon-btn {
-    display: row;
-    align-items: center;
-    justify-content: center;
-    width: 32px;
-    height: 32px;
-    padding: 0;
-    margin: 0;
-    border: 0;
-    outline: 0;
-    background: transparent;
-    box-shadow: none;
-    cursor: pointer;
+.btn-perfil:hover{
+background:var(--primary-bg)
 }
 
-.icon-btn:hover {
-    background: transparent;
+.btn-perfil:active{
+transform:scale(.97)
 }
-
-.icon-btn .icon-mask {
-    width: 24px;
-    height: 24px;
-    background-color: var(--text-1);
-}
-
-.btn-perfil:hover{background:var(--primary-bg);border-color:var(--primary-light)}
-.btn-perfil:active{transform:scale(.97)}
 
 #Saudacoes{
 width:calc(100% + 32px);
@@ -189,6 +173,37 @@ font-weight:750;
 line-height:1
 }
 
+.header-actions{
+display:flex;
+align-items:center;
+gap:8px
+}
+
+.icon-btn{
+width:32px;
+height:32px;
+padding:0;
+margin:0;
+display:flex;
+align-items:center;
+justify-content:center;
+border:0;
+outline:0;
+background:transparent;
+box-shadow:none;
+cursor:pointer
+}
+
+.icon-btn:hover{
+background:transparent
+}
+
+.icon-btn .icon-mask{
+width:24px;
+height:24px;
+background-color:var(--text-1)
+}
+
 
 /* NAVEGAÇÃO */
 
@@ -224,49 +239,139 @@ cursor:pointer;
 transition:.2s
 }
 
-.nav-btn:hover{background:#f8f7fb}
-.nav-btn .Texto{color:var(--text-2);font-size:.9rem;font-weight:500}
-.nav-btn.active{background:var(--primary-bg);border-color:var(--primary)}
-.nav-btn.active .icon-mask{background:var(--primary)}
-.nav-btn.active .Texto{color:var(--primary);font-weight:700}
+.nav-btn:hover{
+background:#f8f7fb
+}
+
+.nav-btn .Texto{
+color:var(--text-2);
+font-size:.9rem;
+font-weight:500
+}
+
+.nav-btn.active{
+background:var(--primary-bg);
+border-color:var(--primary)
+}
+
+.nav-btn.active .icon-mask{
+background:var(--primary)
+}
+
+.nav-btn.active .Texto{
+color:var(--primary);
+font-weight:700
+}
 
 
 /* CONTEÚDO */
 
-#ScrollView{
+.conteudo{
 flex:1;
 min-height:0;
 overflow-y:auto;
+padding:28px;
 background:transparent;
 scrollbar-width:thin;
 scrollbar-color:rgba(0,0,0,.25) transparent
 }
 
-#ScrollView::-webkit-scrollbar{width:7px}
-#ScrollView::-webkit-scrollbar-track{background:transparent}
-#ScrollView::-webkit-scrollbar-thumb{
+.conteudo::-webkit-scrollbar{
+width:7px
+}
+
+.conteudo::-webkit-scrollbar-track{
+background:transparent
+}
+
+.conteudo::-webkit-scrollbar-thumb{
 background:rgba(0,0,0,.25);
 border-radius:10px
 }
 
-#Dashboard{
+.intro{
+margin-bottom:22px;
+display:flex;
+align-items:center;
+justify-content:space-between
+}
+
+.intro h2{
+font-size:1.5rem;
+font-weight:750;
+line-height:1.2
+}
+
+.intro p{
+margin-top:6px;
+color:var(--text-2);
+font-size:.9rem;
+line-height:1.4
+}
+
+
+/* ABAS */
+
+.tabs{
 width:100%;
-padding:28px;
+margin-bottom:24px;
+padding:4px;
+display:flex;
+align-items:center;
+background:#fff;
+border:1px solid var(--border);
+border-radius:12px;
+box-shadow:0 1px 3px rgba(0,0,0,.06)
+}
+
+.tab{
+height:44px;
+flex:1;
+padding:6px 18px;
+border:2px solid transparent;
+border-radius:9px;
+background:transparent;
+color:var(--text-2);
+font-size:.9rem;
+font-weight:600;
+cursor:pointer;
+transition:.2s
+}
+
+.tab:hover{
+background:#f8f7fb
+}
+
+.tab.active{
+background:var(--primary-bg);
+border-color:var(--primary);
+color:var(--primary);
+font-weight:700
+}
+
+
+/* GRID */
+
+.modalidades-grid{
+width:100%;
 display:grid;
-grid-template-columns:repeat(4,minmax(0,1fr));
+grid-template-columns:repeat(3,minmax(0,1fr));
 gap:20px
+}
+
+.modalidades-grid.minhas{
+display:none
 }
 
 
 /* CARDS */
 
-.card{
+.modalidade-card{
 min-width:0;
-padding:20px;
+position:relative;
+overflow:hidden;
 display:flex;
 flex-direction:column;
-gap:16px;
-position:relative;
 border:1px solid rgba(0,0,0,.08);
 border-radius:14px;
 background:#fff;
@@ -274,60 +379,92 @@ box-shadow:0 2px 6px rgba(0,0,0,.1);
 transition:.2s
 }
 
-.card:hover{
+.modalidade-card:hover{
 transform:translateY(-2px);
 box-shadow:0 5px 14px rgba(0,0,0,.14)
 }
 
-.HeaderGroup{
-min-height:28px;
+.modalidade-imagem{
+width:100%;
+height:180px;
 display:flex;
 align-items:center;
-gap:9px
+justify-content:center;
+overflow:hidden;
+background:#f5f5f5;
+font-size:0
 }
 
-.card-etapa{
-color:var(--green);
-font-size:.95rem;
-font-weight:700
+.modalidade-imagem img{
+width:100%;
+height:100%;
+object-fit:cover;
+align-items:center;
+justify-content:center;
 }
 
-.card-center-content{
-flex:1;
+.futebol img{
+    width: 40%;
+}
+
+.volei img{
+    width: 60%;
+}
+
+.natacao img{
+    width: 50%;
+}
+
+.basquete img{
+    width: 35%;
+}
+
+.handebol img{
+    width: 35%;
+}
+
+.capoeira img{
+    width: 42%;
+}
+
+.atletismo img{
+    width: 45%;
+}
+
+.modalidade-info{
+padding:20px;
 display:flex;
 flex-direction:column;
 align-items:flex-start;
-gap:9px;
-text-align:left
+gap:9px
 }
 
-.card-center-content p{
-color:var(--text-1);
-font-size:.88rem;
-line-height:1.4
+.categoria{
+width:max-content;
+padding:5px 10px;
+border-radius:20px;
+background:var(--green-bg);
+color:var(--green);
+font-size:.75rem;
+font-weight:700
 }
 
-.card-title{
+.modalidade-info h3{
 font-size:1.4rem;
 font-weight:750;
 line-height:1.2
 }
 
-.card-subtext{
-display:inline-flex;
-align-items:center;
-padding:5px 10px;
-border-radius:20px;
-font-size:.8rem;
-font-weight:650
+.modalidade-info p{
+min-height:40px;
+color:var(--text-2);
+font-size:.88rem;
+line-height:1.4
 }
 
-
-/* BOTÕES DOS CARDS */
-
-.btn-card{
-align-self:flex-start;
+.btn-detalhes{
 min-height:40px;
+margin-top:5px;
 padding:8px 16px;
 border:0;
 border-radius:9px;
@@ -339,119 +476,70 @@ cursor:pointer;
 transition:.2s
 }
 
-.btn-card:hover{background:#116b33}
-.btn-card:active{transform:scale(.96)}
-
-
-/* RANKING */
-
-.card-ranking-position{
-font-size:1.8rem;
-font-weight:800;
-line-height:1
+.btn-detalhes span{
+margin-left:6px;
+font-size:1rem
 }
 
-.card-ranking-points{
-font-size:1rem;
-font-weight:700
+.btn-detalhes:hover{
+background:#116b33
 }
 
-.card-icon-emoji{font-size:1.25rem;line-height:1}
-
-.ranking-evolution{
-width:max-content;
-padding:5px 9px;
-border-radius:7px;
-background:var(--green-bg);
-color:var(--green);
-font-size:.75rem;
-font-weight:700
+.btn-detalhes:active{
+transform:scale(.96)
 }
 
 
-/* FREQUÊNCIA */
+/* BADGE */
 
-.frequencia-status{
-color:var(--green);
-font-size:.85rem;
-font-weight:700
+.badge {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    z-index: 2;
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: #6800b7;
+    color: #fff;
+    font-size: .75rem;
+    font-weight: 800;
+    box-shadow: 0 2px 6px rgba(104, 0, 183, .3);
 }
 
-.frequencia-barra{
-width:100%;
-height:9px;
-margin-top:3px;
-overflow:hidden;
-border-radius:20px;
-background:#e8f5eb
-}
-
-.frequencia-progresso{
-width:92%;
-height:100%;
-border-radius:inherit;
-background:var(--green)
+.modalidade-card.participando{
+border-color:rgba(21,128,61,.3)
 }
 
 
-/* FEEDBACK */
+/* IMAGENS */
 
-.card-feedback{grid-column:span 2}
-
-.feedback-item{
-display:flex;
-align-items:flex-start;
-gap:12px;
-padding:12px;
-border:1px solid #eee;
-border-radius:12px;
-background:#fff
+.modalidade-imagem.futebol{
+background:none
 }
 
-.feedback-avatar{
-width:38px;
-height:38px;
-min-width:38px;
-display:flex;
-align-items:center;
-justify-content:center;
-border-radius:50%;
-background:var(--primary);
-color:#fff;
-font-weight:700
+.modalidade-imagem.atletismo{
+background:none
 }
 
-.feedback-content{
-min-width:0;
-display:flex;
-flex-wrap:wrap;
-align-items:center;
-gap:3px 7px
+.modalidade-imagem.volei{
+background:none
 }
 
-.feedback-content strong{font-size:.88rem}
-.feedback-content>span{color:var(--text-3);font-size:.75rem}
-.feedback-content p,.feedback-content small{width:100%}
-.feedback-content p{
-margin-top:2px;
-color:var(--text-2);
-font-size:.8rem;
-line-height:1.4
-}
-.feedback-content small{
-margin-top:2px;
-color:var(--text-3);
-font-size:.7rem
+.modalidade-imagem.natacao{
+background:none
 }
 
-.btn-feedback{
-align-self:center;
-padding:7px 14px;
-background:transparent;
-color:var(--green)
+.modalidade-imagem.basquete{
+background:none
 }
 
-.btn-feedback:hover{background:var(--green-bg)}
+.modalidade-imagem.handebol{
+background:none
+}
+
+.modalidade-imagem.capoeira{
+background:none
+}
 
 
 /* ÍCONES */
@@ -473,12 +561,6 @@ mask-image:url('../../SVG/notifications_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.s
 background:var(--text-1)
 }
 
-.icon-seta{
--webkit-mask-image:url('../../SVG/chevron_right_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg');
-mask-image:url('../../SVG/chevron_right_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg');
-background:var(--text-1)
-}
-
 .icon-home{
 -webkit-mask-image:url('../../SVG/home_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg');
 mask-image:url('../../SVG/home_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg')
@@ -494,26 +576,8 @@ mask-image:url('../../SVG/sports_and_outdoors_24dp_E3E3E3_FILL0_wght400_GRAD0_op
 mask-image:url('../../SVG/monitoring_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg')
 }
 
-.icon-trophy{
-    background-color: gold;
--webkit-mask-image:url('../../SVG/trophy_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg');
-mask-image:url('../../SVG/trophy_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg')
-}
-
-.icon-frequency{
-    background-color: rgb(1, 1, 101);
--webkit-mask-image:url('../../SVG/equalizer_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg');
-mask-image:url('../../SVG/equalizer_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg')
-}
-
-
-.icon-calendar{
--webkit-mask-image:url('../../SVG/calendar_month_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg');
-mask-image:url('../../SVG/calendar_month_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg')
-}
-
 .icon-perfil{
-    background-color: #026a13;
+background-color:#026a13;
 -webkit-mask-image:url('../../SVG/person_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg');
 mask-image:url('../../SVG/person_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg')
 }
@@ -528,12 +592,18 @@ mask-image:url('../../SVG/logout_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg')
 /* RESPONSIVIDADE */
 
 @media(max-width:1100px){
-#Dashboard{grid-template-columns:repeat(2,minmax(0,1fr))}
-.card-feedback{grid-column:span 2}
+
+.modalidades-grid{
+grid-template-columns:repeat(2,minmax(0,1fr))
+}
+
 }
 
 @media(max-width:760px){
-body{overflow:auto}
+
+body{
+overflow:auto
+}
 
 .barraLateral{
 width:100%;
@@ -553,8 +623,14 @@ padding:0;
 flex-direction:row
 }
 
-.foto-perfil-box{width:52px;height:52px}
-.btn-perfil{width:auto}
+.foto-perfil-box{
+width:52px;
+height:52px
+}
+
+.btn-perfil{
+width:auto
+}
 
 #Saudacoes{
 width:auto;
@@ -574,37 +650,56 @@ min-height:64px;
 padding:0 18px
 }
 
-#TituloPagina{font-size:1.5rem}
+#TituloPagina{
+font-size:1.5rem
+}
 
 #UpperNav{
+height:58px;
+min-height:58px;
 padding:4px 10px;
 gap:4px
 }
 
 .nav-btn{
+height:46px;
 padding:5px 8px;
 gap:5px
 }
 
-.nav-btn .Texto{font-size:.72rem}
+.nav-btn .Texto{
+font-size:.72rem
+}
 
-#Dashboard{
+.conteudo{
+padding:18px
+}
+
+.modalidades-grid{
 grid-template-columns:1fr;
-padding:18px;
 gap:16px
 }
 
-.card-feedback{grid-column:span 1}
+.modalidade-imagem{
+height:50px
+}
+
 }
 
 @media(max-width:500px){
+
+.logo{
+font-size:26px
+}
+
 .btn-perfil{
 min-height:40px;
 padding:7px 10px
 }
 
-.texto-perfil{display:none}
-#OlaAluno{font-size:.9rem}
+#OlaAluno{
+font-size:.9rem
+}
 
 #UpperNav{
 height:58px;
@@ -617,8 +712,49 @@ flex-direction:column;
 gap:1px
 }
 
-.nav-btn .Texto{font-size:.65rem}
+.nav-btn .Texto{
+font-size:.65rem
+}
 
-#Dashboard{padding:14px}
-.card{padding:16px}
+.conteudo{
+padding:14px
+}
+
+.intro{
+margin-bottom:18px
+}
+
+.intro h2{
+font-size:1.25rem
+}
+
+.intro p{
+font-size:.8rem
+}
+
+.tabs{
+margin-bottom:18px
+}
+
+.tab{
+font-size:.8rem;
+padding:6px 8px
+}
+
+.modalidade-imagem{
+height:50px
+}
+
+.modalidade-info{
+padding:16px
+}
+
+.modalidade-info h3{
+font-size:1.25rem
+}
+
+.modalidade-info p{
+font-size:.82rem
+}
+
 }

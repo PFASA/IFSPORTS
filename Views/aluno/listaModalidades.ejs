@@ -3,155 +3,228 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="../../Css/Aluno/dashbord.css">
-     <script>
-    (function() {
-        const tema = localStorage.getItem("tema_app") || "sistema";
-        if (tema === "escuro" || (tema === "sistema" && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
-            document.documentElement.setAttribute("data-tema", "escuro");
-            document.addEventListener("DOMContentLoaded", () => document.body.setAttribute("data-tema", "escuro"));
-        }
-    })();
+    <title>Modalidades</title>
+    <link rel="stylesheet" href="../../Css/Aluno/modalidades.css">
+    <script>
+        (function() {
+            const tema = localStorage.getItem("tema_app") || "sistema";
+            if (tema === "escuro" || (tema === "sistema" && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+                document.documentElement.setAttribute("data-tema", "escuro");
+                document.addEventListener("DOMContentLoaded", () => document.body.setAttribute("data-tema", "escuro"));
+            }
+        })();
     </script>
 </head>
 <body>
-    <article class="barraLateral">
 
-        <div class= "logo">
+<aside class="barraLateral">
+    <div class= "logo">
             <span>IF</span><span>Sports</span>
         </div>
 
-        <div class="perfil-container">
-  <!-- Foto de perfil ou placeholder de imagem -->
-            <div class="foto-perfil-box">
-                 <img src="../../img/Pedrão.jpeg" alt="Foto de Perfil" class="foto-perfil" />
-            </div>
-  
-  <!-- Informações ou botão de ação -->
-            <button class="btn-perfil">
-                <span class="icon-mask icon-perfil"></span>
-                <span class="texto-perfil">Meu Perfil</span>
+    <div class="perfil-container">
+        <div class="foto-perfil-box">
+            <img src="../../img/Pedrão.jpeg" alt="Foto de Perfil" class="foto-perfil">
+        </div>
+
+        <a href="/Perfil" class="btn-perfil">
+            <span class="icon-mask icon-perfil"></span>
+            <span>Meu Perfil</span>
+        </a>
+    </div>
+
+    <section id="Saudacoes">
+        <p id="OlaAluno">Olá, Pedro! 👋</p>
+    </section>
+</aside>
+
+<main class="TelaDashboard">
+
+    <header id="Header">
+        <h1 id="TituloPagina">Modalidades</h1>
+
+        <div class="header-actions">
+            <button class="icon-btn" aria-label="Notificações">
+                <span class="icon-mask icon-sino"></span>
+            </button>
+
+            <button class="icon-btn" aria-label="Sair">
+                <span class="icon-mask icon-sair"></span>
             </button>
         </div>
-        <section id="Saudacoes">
-                    <p id="OlaAluno">Olá, Pedro! 👋</p>
-        </section>
+    </header>
 
-    </article>
-    
+    <nav id="UpperNav">
+        <a href="/Dashbord" class="nav-btn">
+            <span class="icon-mask icon-home"></span>
+            <span class="Texto">Home</span>
+        </a>
 
-    <div class="TelaDashboard">
+        <a href="/Modalidades" class="nav-btn active">
+            <span class="icon-mask icon-modalidades"></span>
+            <span class="Texto">Modalidades</span>
+        </a>
 
-        <!-- Header fora do ScrollView para encostar nas bordas -->
-        <header id="Header">
+        <a href="/MeuDesempenho" class="nav-btn">
+            <span class="icon-mask icon-desempenho"></span>
+            <span class="Texto">Meu Desempenho</span>
+        </a>
+    </nav>
 
-            <h1 id="TituloPagina">Modalidades</h1>
+    <section class="conteudo">
 
-            <div class="HeaderAcoes">
-
-                <button class="icon-btn" title="Notificações">
-                    <span class="icon-mask icon-sino"></span>
-                </button>
-
-                <button class="icon-btn" title="Sair">
-                    <span class="icon-mask icon-sair"></span>
-                </button>
-
-            </div>
-
-        </header>
-        <nav id="UpperNav">
-            <a href="/Dashbord" id="BtnInicio" class="nav-btn">
-                <span class="icon-mask icon-home"></span>
-                <span class="Texto">Home</span>
-            </a>
-            <a href="/Modalidades" id="BtnAgenda" class="nav-btn">
-                <span class="icon-mask icon-modalidades"></span>
-                <span class="Texto">Modalidades</span>
-            </a>
-            <a href="/MeuDesempenho" id="BtnPerfil" class="nav-btn">
-                <span class="icon-mask icon-desempenho"></span>
-                <span class="Texto">Meu Desempenho</span>
-            </a>
-        </nav>
-
-        <!-- Área de rolagem apenas com os cards e conteúdo -->
-        <div id="">
-            <div id="Dashboard">
-
-                
-
-                <div id="CardTCC" class="card">
-                 
-                </div>
-
-                <div id="CardAgenda" class="card">
-                 
-                </div>
-
-                <div id="CardVersion" class="card">
-                    
-                </div>
-
-                <div id="CardFeedback" class="card">
-                   
-                </div>
-                
-                <div id="CardTCC" class="card">
-                 
-                </div>
-
-                <div id="CardAgenda" class="card">
-                 
-                </div>
-
-                <div id="CardVersion" class="card">
-                    
-                </div>
-
-                <div id="CardFeedback" class="card">
-                   
-                </div>
-                
-                <div id="CardTCC" class="card">
-                 
-                </div>
-
-                <div id="CardAgenda" class="card">
-                 
-                </div>
-
-                <div id="CardVersion" class="card">
-                    
-                </div>
-
-                <div id="CardFeedback" class="card">
-                   
-                </div>
-
+        <div class="intro">
+            <div>
+                <h2>Modalidades esportivas</h2>
+                <p>Confira as modalidades oferecidas e participe das atividades.</p>
             </div>
         </div>
 
-        <!-- Bottom Navigation -->
-        
+        <div class="tabs">
+            <button class="tab active" data-tab="todas">Todas</button>
+            <button class="tab" data-tab="minhas">Minhas Modalidades</button>
+        </div>
 
-    </div>
-   
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const pathAtual = window.location.pathname.toLowerCase();
-            const navLinks = document.querySelectorAll("#UpperNav .nav-btn");
+        <div class="modalidades-grid" id="todas">
 
-            navLinks.forEach(link => {
-                const href = link.getAttribute("href").toLowerCase();
-                
-                if (pathAtual === href || (pathAtual === "/" && href === "/dashboard")) {
-                    link.classList.add("active");
-                }
-            });
+            <article class="modalidade-card">
+                <div class="modalidade-imagem futebol">
+                    <img src="../../img/futebol.png" alt="Futebol">
+                </div>
+
+                <div class="modalidade-info">
+                    <span class="categoria">Esporte coletivo</span>
+                    <h3>Futebol</h3>
+                    <p>Treinos e atividades de futebol.</p>
+                    <button class="btn-detalhes">Ver detalhes <span>→</span></button>
+                </div>
+            </article>
+
+            <article class="modalidade-card">
+                <div class="modalidade-imagem volei">
+                    <img src="../../img/volei.png" alt="Vôlei">
+                </div>
+
+                <div class="modalidade-info">
+                    <span class="categoria">Esporte coletivo</span>
+                    <h3>Vôlei</h3>
+                    <p>Treinos e atividades de voleibol.</p>
+                    <button class="btn-detalhes">Ver detalhes <span>→</span></button>
+                </div>
+            </article>
+
+            <article class="modalidade-card">
+                <div class="modalidade-imagem natacao">
+                    <img src="../../img/natação.png" alt="Natação">
+                </div>
+
+                <div class="modalidade-info">
+                    <span class="categoria">Esporte individual</span>
+                    <h3>Natação</h3>
+                    <p>Práticas e treinamentos de natação.</p>
+                    <button class="btn-detalhes">Ver detalhes <span>→</span></button>
+                </div>
+            </article>
+
+            <article class="modalidade-card participando">
+                <div class="badge">Participando⭐</div>
+
+                <div class="modalidade-imagem basquete">
+                    <img src="../../img/basquete.png" alt="Basquete">
+                </div>
+
+                <div class="modalidade-info">
+                    <span class="categoria">Esporte coletivo</span>
+                    <h3>Basquete</h3>
+                    <p>Treinos e atividades de basquetebol.</p>
+                    <button class="btn-detalhes">Ver detalhes <span>→</span></button>
+                </div>
+            </article>
+
+            <article class="modalidade-card">
+                <div class="modalidade-imagem handebol">
+                    <img src="../../img/handebol.png" alt="Handebol">
+                </div>
+
+                <div class="modalidade-info">
+                    <span class="categoria">Esporte coletivo</span>
+                    <h3>Handebol</h3>
+                    <p>Treinos e atividades de handebol.</p>
+                    <button class="btn-detalhes">Ver detalhes <span>→</span></button>
+                </div>
+            </article>
+
+            <article class="modalidade-card">
+                <div class="modalidade-imagem capoeira">
+                    <img src="../../img/capoeira.png" alt="Capoeira">
+                </div>
+
+                <div class="modalidade-info">
+                    <span class="categoria">Luta e cultura</span>
+                    <h3>Capoeira</h3>
+                    <p>Práticas e atividades de capoeira.</p>
+                    <button class="btn-detalhes">Ver detalhes <span>→</span></button>
+                </div>
+            </article>
+
+            <article class="modalidade-card">
+                <div class="modalidade-imagem atletismo">
+                    <img src="../../img/atletismo.png" alt="Atletismo">
+                </div>
+
+                <div class="modalidade-info">
+                    <span class="categoria">Esporte individual</span>
+                    <h3>Atletismo</h3>
+                    <p>Práticas e treinamentos de atletismo.</p>
+                    <button class="btn-detalhes">Ver detalhes <span>→</span></button>
+                </div>
+            </article>
+
+        </div>
+
+        <div class="modalidades-grid minhas" id="minhas">
+
+            <article class="modalidade-card participando">
+                <div class="badge">Participando</div>
+
+                <div class="modalidade-imagem basquete">
+                    <img src="../../img/basquete.png" alt="Basquete">
+                </div>
+
+                <div class="modalidade-info">
+                    <span class="categoria">Esporte coletivo</span>
+                    <h3>Basquete</h3>
+                    <p>Treinos e atividades de basquetebol.</p>
+                    <button class="btn-detalhes">Ver detalhes <span>→</span></button>
+                </div>
+            </article>
+
+        </div>
+
+    </section>
+
+</main>
+
+<script>
+    const tabs = document.querySelectorAll(".tab");
+    const todas = document.getElementById("todas");
+    const minhas = document.getElementById("minhas");
+
+    tabs.forEach(tab => {
+        tab.addEventListener("click", () => {
+            tabs.forEach(item => item.classList.remove("active"));
+            tab.classList.add("active");
+
+            if (tab.dataset.tab === "todas") {
+                todas.style.display = "grid";
+                minhas.style.display = "none";
+            } else {
+                todas.style.display = "none";
+                minhas.style.display = "grid";
+            }
         });
-    </script>
+    });
+</script>
 
 </body>
-</html> 
+</html>
