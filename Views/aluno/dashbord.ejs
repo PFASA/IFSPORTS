@@ -28,58 +28,45 @@
 <body>
 
     <!-- SIDEBAR -->
-    <article class="barraLateral">
-
-        <div class= "logo">
+<aside class="barraLateral">
+    <div class= "logo">
             <span>IF</span><span>Sports</span>
         </div>
 
-        <div class="perfil-container">
-
-            <div class="foto-perfil-box">
-                <img
-                    src="../../img/Pedrão.jpeg"
-                    alt="Foto de Perfil"
-                    class="foto-perfil"
-                >
-            </div>
-
-            <button class="btn-perfil">
-                <span class="icon-mask icon-perfil"></span>
-                <span class="texto-perfil">Meu Perfil</span>
-            </button>
-
+    <div class="perfil-container">
+        <div class="foto-perfil-box">
+            <img src="../../img/Pedrão.jpeg" alt="Foto de Perfil" class="foto-perfil">
         </div>
 
-        <section id="Saudacoes">
-            <p id="OlaAluno">Olá, Pedro! 👋</p>
-        </section>
+        <a href="/Perfil" class="btn-perfil">
+            <span class="icon-mask icon-perfil"></span>
+            <span>Meu Perfil</span>
+        </a>
+    </div>
 
-    </article>
+    <section id="Saudacoes">
+        <p id="OlaAluno">Olá, Pedro! 👋</p>
+    </section>
+</aside>
 
 
     <!-- ÁREA PRINCIPAL -->
     <div class="TelaDashboard">
 
         <!-- HEADER -->
-        <header id="Header">
+       <header id="Header">
+        <h1 id="TituloPagina">Dashboard</h1>
 
-            <h1 id="TituloPagina">Dashboard</h1>
+        <div class="header-actions">
+            <button class="icon-btn" aria-label="Notificações">
+                <span class="icon-mask icon-sino"></span>
+            </button>
 
-            <div class="HeaderAcoes">
-
-                <button class="icon-btn" title="Notificações">
-                    <span class="icon-mask icon-sino"></span>
-                </button>
-
-                <button class="icon-btn" title="Sair">
-                    <span class="icon-mask icon-sair"></span>
-                </button>
-
-            </div>
-
-        </header>
-
+            <button class="icon-btn" aria-label="Sair">
+                <span class="icon-mask icon-sair"></span>
+            </button>
+        </div>
+    </header>
 
         <!-- NAVEGAÇÃO -->
         <nav id="UpperNav">

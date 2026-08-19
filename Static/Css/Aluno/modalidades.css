@@ -8,6 +8,7 @@
 --text-3:#828282;
 --border:#e6e6e6;
 --green:#15803d;
+--green-dark:#194e1d;
 --green-bg:#dcfce7;
 --font:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif
 }
@@ -30,9 +31,6 @@ color:var(--text-1);
 background:var(--bg-main)
 }
 
-
-/* SIDEBAR */
-
 .barraLateral{
 width:150px;
 min-width:150px;
@@ -48,29 +46,23 @@ z-index:10
 }
 
 .logo{
-    font-size: 32px;
-    font-weight: 800;
-    letter-spacing: -1px;
+font-size:32px;
+font-weight:800;
+letter-spacing:-1px
 }
 
 .logo span:first-child{
-    background: linear-gradient(135deg, #00a859, #085601);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+background:linear-gradient(135deg,#00a859,#085601);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+background-clip:text
 }
 
 .logo span:last-child{
-    background: linear-gradient(
-        90deg,
-        #0e0078 0%,
-        #50007b 35%,
-        #d900c7 70%,
-        #f46161 100%
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+background:linear-gradient(90deg,#0e0078 0%,#50007b 35%,#d900c7 70%,#f46161 100%);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+background-clip:text
 }
 
 .perfil-container{
@@ -142,9 +134,6 @@ text-align:center;
 white-space:nowrap
 }
 
-
-/* ÁREA PRINCIPAL */
-
 .TelaDashboard{
 flex:1;
 min-width:0;
@@ -154,29 +143,31 @@ flex-direction:column;
 overflow:hidden
 }
 
-#Header{
-width:100%;
-height:70px;
-min-height:70px;
-padding:0 28px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-flex-shrink:0;
-background:#fff;
-border-bottom:1px solid var(--border)
+#Header {
+  width: 100%;
+  height: 70px;
+  min-height: 70px;
+  padding: 0 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  flex-shrink: 0;
+  background: #fff;
+  border-bottom: 1px solid var(--border);
 }
 
-#TituloPagina{
-font-size:2rem;
-font-weight:750;
-line-height:1
+#TituloPagina {
+  font-size: 2rem;
+  font-weight: 750;
+  line-height: 1;
+  margin: 0;
 }
 
-.header-actions{
-display:flex;
-align-items:center;
-gap:8px
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px; 
+  margin-left: auto; 
 }
 
 .icon-btn{
@@ -203,9 +194,6 @@ width:24px;
 height:24px;
 background-color:var(--text-1)
 }
-
-
-/* NAVEGAÇÃO */
 
 #UpperNav{
 width:100%;
@@ -263,9 +251,6 @@ color:var(--primary);
 font-weight:700
 }
 
-
-/* CONTEÚDO */
-
 .conteudo{
 flex:1;
 min-height:0;
@@ -290,10 +275,7 @@ border-radius:10px
 }
 
 .intro{
-margin-bottom:22px;
-display:flex;
-align-items:center;
-justify-content:space-between
+margin-bottom:16px
 }
 
 .intro h2{
@@ -304,53 +286,45 @@ line-height:1.2
 
 .intro p{
 margin-top:6px;
-color:var(--text-2);
+color:rgb(0, 0, 0);
 font-size:.9rem;
 line-height:1.4
 }
 
-
-/* ABAS */
-
 .tabs{
-width:100%;
+display:inline-flex;
+width:fit-content;
 margin-bottom:24px;
-padding:4px;
-display:flex;
-align-items:center;
-background:#fff;
-border:1px solid var(--border);
-border-radius:12px;
-box-shadow:0 1px 3px rgba(0,0,0,.06)
+padding:6px;
+background:#ffffff;
+border-radius:16px;
+box-shadow:0 2px 8px rgba(0,0,0,.08);
+gap:6px
 }
 
 .tab{
-height:44px;
-flex:1;
-padding:6px 18px;
-border:2px solid transparent;
-border-radius:9px;
+height:42px;
+padding:0 28px;
+border:0;
+border-radius:12px;
 background:transparent;
-color:var(--text-2);
+color:#334155;
 font-size:.9rem;
 font-weight:600;
 cursor:pointer;
-transition:.2s
+transition:.2s;
+white-space:nowrap
 }
 
 .tab:hover{
-background:#f8f7fb
+background:rgba(0,0,0,.04)
 }
 
 .tab.active{
-background:var(--primary-bg);
-border-color:var(--primary);
-color:var(--primary);
+background:var(--green-dark);
+color:#ffffff;
 font-weight:700
 }
-
-
-/* GRID */
 
 .modalidades-grid{
 width:100%;
@@ -362,9 +336,6 @@ gap:20px
 .modalidades-grid.minhas{
 display:none
 }
-
-
-/* CARDS */
 
 .modalidade-card{
 min-width:0;
@@ -400,35 +371,35 @@ width:100%;
 height:100%;
 object-fit:cover;
 align-items:center;
-justify-content:center;
+justify-content:center
 }
 
 .futebol img{
-    width: 40%;
+width:40%
 }
 
 .volei img{
-    width: 60%;
+width:60%
 }
 
 .natacao img{
-    width: 50%;
+width:50%
 }
 
 .basquete img{
-    width: 35%;
+width:35%
 }
 
 .handebol img{
-    width: 35%;
+width:35%
 }
 
 .capoeira img{
-    width: 42%;
+width:42%
 }
 
 .atletismo img{
-    width: 45%;
+width:45%
 }
 
 .modalidade-info{
@@ -489,29 +460,23 @@ background:#116b33
 transform:scale(.96)
 }
 
-
-/* BADGE */
-
-.badge {
-    position: absolute;
-    top: 14px;
-    right: 14px;
-    z-index: 2;
-    padding: 6px 12px;
-    border-radius: 20px;
-    background: #6800b7;
-    color: #fff;
-    font-size: .75rem;
-    font-weight: 800;
-    box-shadow: 0 2px 6px rgba(104, 0, 183, .3);
+.badge{
+position:absolute;
+top:14px;
+right:14px;
+z-index:2;
+padding:6px 12px;
+border-radius:20px;
+background:#6800b7;
+color:#fff;
+font-size:.75rem;
+font-weight:800;
+box-shadow:0 2px 6px rgba(104,0,183,.3)
 }
 
 .modalidade-card.participando{
 border-color:rgba(21,128,61,.3)
 }
-
-
-/* IMAGENS */
 
 .modalidade-imagem.futebol{
 background:none
@@ -540,9 +505,6 @@ background:none
 .modalidade-imagem.capoeira{
 background:none
 }
-
-
-/* ÍCONES */
 
 .icon-mask{
 width:22px;
@@ -588,9 +550,6 @@ background-color:#c40202!important;
 mask-image:url('../../SVG/logout_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg')
 }
 
-
-/* RESPONSIVIDADE */
-
 @media(max-width:1100px){
 
 .modalidades-grid{
@@ -605,17 +564,18 @@ body{
 overflow:auto
 }
 
-.barraLateral{
-width:100%;
-min-width:0;
-height:auto;
-min-height:auto;
-padding:12px 16px;
-flex-direction:row;
-justify-content:space-between;
-border-right:0;
-border-bottom:1px solid var(--border)
+
+.barraLateral {
+    width: 100%;
+    min-width: 0;
+    height: auto; min-height: auto;
+    padding: 12px 16px;
+    flex-direction: row;
+    justify-content: space-between;
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
 }
+
 
 .perfil-container{
 width:auto;
@@ -681,7 +641,7 @@ gap:16px
 }
 
 .modalidade-imagem{
-height:50px
+height:120px
 }
 
 }
@@ -721,7 +681,7 @@ padding:14px
 }
 
 .intro{
-margin-bottom:18px
+margin-bottom:14px
 }
 
 .intro h2{
@@ -733,16 +693,18 @@ font-size:.8rem
 }
 
 .tabs{
-margin-bottom:18px
+margin-bottom:18px;
+width:100%
 }
 
 .tab{
+flex:1;
 font-size:.8rem;
-padding:6px 8px
+padding:0 12px
 }
 
 .modalidade-imagem{
-height:50px
+height:100px
 }
 
 .modalidade-info{

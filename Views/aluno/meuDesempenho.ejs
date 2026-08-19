@@ -3,155 +3,316 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="../../Css/Aluno/dashbord.css">
-     <script>
-    (function() {
-        const tema = localStorage.getItem("tema_app") || "sistema";
-        if (tema === "escuro" || (tema === "sistema" && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
-            document.documentElement.setAttribute("data-tema", "escuro");
-            document.addEventListener("DOMContentLoaded", () => document.body.setAttribute("data-tema", "escuro"));
-        }
-    })();
+    <title>Meu Desempenho</title>
+    <link rel="stylesheet" href="../../Css/Aluno/meuDesempenho.css">
+    <script>
+        (function() {
+            const tema = localStorage.getItem("tema_app") || "sistema";
+            if (tema === "escuro" || (tema === "sistema" && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+                document.documentElement.setAttribute("data-tema", "escuro");
+                document.addEventListener("DOMContentLoaded", () => document.body.setAttribute("data-tema", "escuro"));
+            }
+        })();
     </script>
 </head>
 <body>
-    <article class="barraLateral">
 
-        <div class= "logo">
+<aside class="barraLateral">
+    <div class= "logo">
             <span>IF</span><span>Sports</span>
         </div>
 
-        <div class="perfil-container">
-  <!-- Foto de perfil ou placeholder de imagem -->
-            <div class="foto-perfil-box">
-                 <img src="../../img/Pedrão.jpeg" alt="Foto de Perfil" class="foto-perfil" />
-            </div>
-  
-  <!-- Informações ou botão de ação -->
-            <button class="btn-perfil">
-                <span class="icon-mask icon-perfil"></span>
-                <span class="texto-perfil">Meu Perfil</span>
+    <div class="perfil-container">
+        <div class="foto-perfil-box">
+            <img src="../../img/Pedrão.jpeg" alt="Foto de Perfil" class="foto-perfil">
+        </div>
+
+        <a href="/Perfil" class="btn-perfil">
+            <span class="icon-mask icon-perfil"></span>
+            <span>Meu Perfil</span>
+        </a>
+    </div>
+
+    <section id="Saudacoes">
+        <p id="OlaAluno">Olá, Aluno! 👋</p>
+    </section>
+
+</aside>
+
+<main class="TelaDesempenho">
+
+    <header id="Header">
+        <h1 id="TituloPagina">Meu Desempenho</h1>
+
+        <div class="header-actions">
+            <button class="icon-btn" aria-label="Notificações">
+                <span class="icon-mask icon-sino"></span>
+            </button>
+
+            <button class="icon-btn" aria-label="Sair">
+                <span class="icon-mask icon-sair"></span>
             </button>
         </div>
-        <section id="Saudacoes">
-                    <p id="OlaAluno">Olá, Pedro! 👋</p>
-        </section>
+    </header>
 
-    </article>
-    
+    <nav id="UpperNav">
 
-    <div class="TelaDashboard">
+        <a href="/Dashbord" class="nav-btn">
+            <span class="icon-mask icon-home"></span>
+            <span class="Texto">Home</span>
+        </a>
 
-        <!-- Header fora do ScrollView para encostar nas bordas -->
-        <header id="Header">
+        <a href="/Modalidades" class="nav-btn">
+            <span class="icon-mask icon-modalidades"></span>
+            <span class="Texto">Modalidades</span>
+        </a>
 
-            <h1 id="TituloPagina">Meus Desempenhos</h1>
+        <a href="/MeuDesempenho" class="nav-btn active">
+            <span class="icon-mask icon-desempenho"></span>
+            <span class="Texto">Meu Desempenho</span>
+        </a>
 
-            <div class="HeaderAcoes">
+    </nav>
 
-                <button class="icon-btn" title="Notificações">
-                    <span class="icon-mask icon-sino"></span>
-                </button>
+    <section id="ScrollView">
 
-                <button class="icon-btn" title="Sair">
-                    <span class="icon-mask icon-sair"></span>
-                </button>
+        <div id="Desempenho">
 
-            </div>
+            <article class="card card-ficha">
 
-        </header>
-        <nav id="UpperNav">
-            <a href="/Dashbord" id="BtnInicio" class="nav-btn">
-                <span class="icon-mask icon-home"></span>
-                <span class="Texto">Home</span>
-            </a>
-            <a href="/Modalidades" id="BtnAgenda" class="nav-btn">
-                <span class="icon-mask icon-modalidades"></span>
-                <span class="Texto">Modalidades</span>
-            </a>
-            <a href="/MeuDesempenho" id="BtnPerfil" class="nav-btn">
-                <span class="icon-mask icon-desempenho"></span>
-                <span class="Texto">Meu Desempenho</span>
-            </a>
-        </nav>
+                <div class="card-header">
+                    <div>
+                        <span class="card-label">Basquete</span>
+                        <h2>Ficha técnica</h2>
+                    </div>
 
-        <!-- Área de rolagem apenas com os cards e conteúdo -->
-        <div id="">
-            <div id="Dashboard">
-
-                
-
-                <div id="CardTCC" class="card">
-                 
+                    <span class="icon-mask icon-basquete"></span>
                 </div>
 
-                <div id="CardAgenda" class="card">
-                 
+                <div class="metricas">
+
+                    <div class="metrica">
+                        <div class="metrica-topo">
+                            <span>Pontos</span>
+                            <strong>142</strong>
+                        </div>
+                        <div class="barra-metrica">
+                            <span style="width:88%"></span>
+                        </div>
+                    </div>
+
+                    <div class="metrica">
+                        <div class="metrica-topo">
+                            <span>Assistências</span>
+                            <strong>38</strong>
+                        </div>
+                        <div class="barra-metrica">
+                            <span style="width:72%"></span>
+                        </div>
+                    </div>
+
+                    <div class="metrica">
+                        <div class="metrica-topo">
+                            <span>Rebotes</span>
+                            <strong>64</strong>
+                        </div>
+                        <div class="barra-metrica">
+                            <span style="width:80%"></span>
+                        </div>
+                    </div>
+
+                    <div class="metrica">
+                        <div class="metrica-topo">
+                            <span>Arremessos certos</span>
+                            <strong>76</strong>
+                        </div>
+                        <div class="barra-metrica">
+                            <span style="width:84%"></span>
+                        </div>
+                    </div>
+
+                    <div class="metrica">
+                        <div class="metrica-topo">
+                            <span>Roubos de bola</span>
+                            <strong>21</strong>
+                        </div>
+                        <div class="barra-metrica">
+                            <span style="width:65%"></span>
+                        </div>
+                    </div>
+
+                    <div class="metrica">
+                        <div class="metrica-topo">
+                            <span>Bloqueios</span>
+                            <strong>12</strong>
+                        </div>
+                        <div class="barra-metrica">
+                            <span style="width:58%"></span>
+                        </div>
+                    </div>
+
                 </div>
 
-                <div id="CardVersion" class="card">
-                    
+            </article>
+
+            <article class="card card-grafico">
+
+                <div class="card-header">
+
+                    <div>
+                        <span class="card-label">Evolução</span>
+                        <h2>Pontos por período</h2>
+                    </div>
+
+                    <select class="periodo">
+                        <option>Últimos 6 meses</option>
+                        <option>Últimos 3 meses</option>
+                        <option>Último mês</option>
+                    </select>
+
                 </div>
 
-                <div id="CardFeedback" class="card">
-                   
-                </div>
-                
-                <div id="CardTCC" class="card">
-                 
+                <div class="grafico">
+
+                    <div class="eixo-y">
+                        <span>100</span>
+                        <span>80</span>
+                        <span>60</span>
+                        <span>40</span>
+                        <span>20</span>
+                        <span>0</span>
+                    </div>
+
+                    <div class="grafico-area">
+
+                        <div class="linhas">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <div class="barras">
+
+                            <div class="barra-grupo">
+                                <div class="barra" style="height:42%"><span>42</span></div>
+                                <small>Mar</small>
+                            </div>
+
+                            <div class="barra-grupo">
+                                <div class="barra" style="height:55%"><span>55</span></div>
+                                <small>Abr</small>
+                            </div>
+
+                            <div class="barra-grupo">
+                                <div class="barra" style="height:48%"><span>48</span></div>
+                                <small>Mai</small>
+                            </div>
+
+                            <div class="barra-grupo">
+                                <div class="barra" style="height:68%"><span>68</span></div>
+                                <small>Jun</small>
+                            </div>
+
+                            <div class="barra-grupo">
+                                <div class="barra" style="height:78%"><span>78</span></div>
+                                <small>Jul</small>
+                            </div>
+
+                            <div class="barra-grupo">
+                                <div class="barra destaque" style="height:91%"><span>91</span></div>
+                                <small>Ago</small>
+                            </div>
+
+                        </div>
+
+                    </div>
+
                 </div>
 
-                <div id="CardAgenda" class="card">
-                 
+            </article>
+
+            <article class="card card-ranking">
+
+                <div class="card-header">
+                    <div>
+                        <span class="card-label">Basquete</span>
+                        <h2>Ranking</h2>
+                    </div>
+
+                    <span class="icon-mask icon-trophy"></span>
                 </div>
 
-                <div id="CardVersion" class="card">
-                    
+                <div class="ranking">
+
+                    <div class="ranking-item primeiro">
+                        <span class="posicao ouro">1</span>
+                        <span class="nome">Cauã Lima</span>
+                        <strong>999.999 pts</strong>
+                    </div>
+
+                    <div class="ranking-item">
+                        <span class="posicao prata">2</span>
+                        <span class="nome">Lucas Oliveira</span>
+                        <strong>920 pts</strong>
+                    </div>
+
+                    <div class="ranking-item voce">
+                        <span class="posicao bronze">3</span>
+                        <span class="nome">Você</span>
+                        <strong>875 pts</strong>
+                    </div>
+
+                    <div class="ranking-item">
+                        <span class="posicao">4</span>
+                        <span class="nome">Carlos Eduardo</span>
+                        <strong>840 pts</strong>
+                    </div>
+
+                    <div class="ranking-item">
+                        <span class="posicao">5</span>
+                        <span class="nome">Rafael Lima</span>
+                        <strong>790 pts</strong>
+                    </div>
+
                 </div>
 
-                <div id="CardFeedback" class="card">
-                   
-                </div>
-                
-                <div id="CardTCC" class="card">
-                 
+                <button class="btn-ranking">Ver ranking completo <span>→</span></button>
+
+            </article>
+
+            <article class="card card-resumo">
+
+                <div class="resumo-item">
+                    <span>Treinos realizados</span>
+                    <strong>24</strong>
                 </div>
 
-                <div id="CardAgenda" class="card">
-                 
+                <div class="resumo-item">
+                    <span>Frequência média</span>
+                    <strong>92%</strong>
                 </div>
 
-                <div id="CardVersion" class="card">
-                    
+                <div class="resumo-item">
+                    <span>Melhor desempenho</span>
+                    <strong>91</strong>
+                    <small>Pontos</small>
                 </div>
 
-                <div id="CardFeedback" class="card">
-                   
+                <div class="resumo-item">
+                    <span>Pontos acumulados</span>
+                    <strong>875</strong>
                 </div>
 
-            </div>
+            </article>
+
         </div>
 
-        <!-- Bottom Navigation -->
-        
+    </section>
 
-    </div>
-   
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const pathAtual = window.location.pathname.toLowerCase();
-            const navLinks = document.querySelectorAll("#UpperNav .nav-btn");
-
-            navLinks.forEach(link => {
-                const href = link.getAttribute("href").toLowerCase();
-                
-                if (pathAtual === href || (pathAtual === "/" && href === "/dashboard")) {
-                    link.classList.add("active");
-                }
-            });
-        });
-    </script>
+</main>
 
 </body>
-</html> 
+</html>
