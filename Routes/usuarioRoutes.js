@@ -15,4 +15,6 @@ router.get("/Modalidades", alunoController.modalidades);
 
 router.get("/MeuDesempenho", alunoController.meuDesempenho);
 
+router.get("/MeuPerfil", alunoController.meuPerfil);
+
 module.exports = router;

@@ -66,3 +66,13 @@ exports.meuTreinos = async (req, res) => {
     });
 
 };
+
+exports.meuPerfil= async (req, res) => {
+
+   
+
+    res.render("aluno/meuPerfil", {
+       
+    });
+
+};
