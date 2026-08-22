@@ -1,6 +1,6 @@
 const Professor = require("../Models/professor");
-const Modalidade = require("../models/modalidades");
-const Inscricao = require("../models/inscricao");
+const Modalidade = require("../Models/modalidades");
+const Inscricao = require("../Models/inscricao_modalidade");
 
 
 
